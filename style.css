@@ -57,6 +57,94 @@ body{
 }
 .navbar ul li a{
   color: black;
+}
+.navbar a {
+  display: block;
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  color: rgba(239, 233, 233, 0.703);
+  font-weight: bold;
+  font-size: 20px;
   text-decoration: none;
-  font-weight: 600;
+  transition: all 1s;
+  position: relative;
+}
+.navbar a:hover:after {
+  width: 100%;
+}
+.navbar a:hover:before { 
+  width: 100%;
+}
+.navbar a:after {
+  content: "";
+  bottom: -5px;
+  left: 0;
+  position: absolute;
+  background-color: #2980b9;
+  height: 4px;
+  width: 0;
+  transition: all 0.5s;
+}
+.navbar a:before {
+  content: attr(data-name);
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  width: 0%;
+  overflow: hidden;
+  transition: all 0.5s;
+}
+.navbar .active {
+  color: black;
+  transition: all 0s;
+}
+.navbar a.active:after {
+  content: "";
+  left: 0;
+  position: absolute;
+  background-color: rgb(160, 70, 199);
+  height: 4px;
+  width: 100%;
+}
+.navbar a.active:hover:before {
+  width: 0;
+  transition: all 0s;
+}
+.navbar a:first-child {
+  animation: menu-animation 0.5s;
+}
+.navbar a:nth-child(2) {
+  animation: menu-animation 1s;
+}
+.navbar a:nth-child(3) {
+  animation: menu-animation 1.5s;
+}
+.navbar a:nth-child(4) {
+  animation: menu-animation 2s;
+}
+.navbar a:nth-child(5) {
+  animation: menu-animation 2.5s;
+}
+
+@keyframes menu-animation {
+  from {
+    opacity: 1;
+    transform: translate(0, 200%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+@media (max-width: 620px) {
+  .navbar a {
+    border-bottom: none;
+    border-right: 5px solid transparent;
+  }
 }
