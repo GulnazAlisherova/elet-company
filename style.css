@@ -1,5 +1,5 @@
-body{
-  font-family: 'Cardo', serif;
+body {
+  font-family: "Cardo", serif;
 }
 
 .row {
@@ -48,14 +48,14 @@ body{
 .col-12 {
   flex: 0 0 100%;
 }
-.navbar ul{
+.navbar ul {
   display: flex;
   list-style-type: none;
 }
-.navbar ul li{
+.navbar ul li {
   margin: 1rem;
 }
-.navbar ul li a{
+.navbar ul li a {
   color: black;
 }
 .navbar a {
@@ -72,7 +72,7 @@ body{
 .navbar a:hover:after {
   width: 100%;
 }
-.navbar a:hover:before { 
+.navbar a:hover:before {
   width: 100%;
 }
 .navbar a:after {
