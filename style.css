@@ -52,4 +52,9 @@ body{
   display: flex;
   list-style-type: none;
 }
-.navbar{}
+.navbar ul li{
+  margin: 1rem;
+}
+.navbar ul li a{
+  color: black;
+}
